@@ -1,0 +1,123 @@
+.App {
+  text-align: center;
+}
+/* Define the gradient */
+.instagram-gradient {
+  background: #f09433;
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+
+/* This is the magic: when the parent is hovered, apply the gradient to the parent,
+   and make the SVG's fill color transparent to reveal the background through it. */
+.instagram-icon-wrapper:hover .instagram-svg {
+  fill: transparent; /* Make the SVG fill transparent */
+  /* These properties are crucial for making the SVG act as a mask */
+  -webkit-mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='currentColor' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fillRule='evenodd' d='M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.08 2.525c.636-.247 1.363-.416 2.427-.465C9.53 2.013 9.884 2 12.315 2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 8a3 3 0 110-6 3 3 0 010 6zm6.406-11.845a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5z' clipRule='evenodd' /%3E%3C/svg%3E") no-repeat center / contain;
+  mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='currentColor' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fillRule='evenodd' d='M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.08 2.525c.636-.247 1.363-.416 2.427-.465C9.53 2.013 9.884 2 12.315 2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 8a3 3 0 110-6 3 3 0 010 6zm6.406-11.845a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5z' clipRule='evenodd' /%3E%3C/svg%3E") no-repeat center / contain;
+  background-clip: text; /* Clip background to text shape (effectively the SVG path) */
+  -webkit-background-clip: text; /* For webkit browsers */
+}
+
+.instagram-icon-wrapper:hover .instagram-gradient-hover {
+    /* Apply the gradient to the background of the wrapper */
+    background: #f09433;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+@property --num-transactions {
+syntax: "<integer>";
+initial-value: 0;
+inherits: false;
+}
+
+@property --num-assets {
+syntax: "<integer>";
+initial-value: 0;
+inherits: false;
+}
+
+@property --num-users {
+syntax: "<integer>";
+initial-value: 0;
+inherits: false;
+}
+
+@keyframes counter {
+from {
+--num-transactions: 0;
+--num-assets: 0;
+--num-users: 0;
+}
+to {
+--num-transactions: 44;
+--num-assets: 119;
+--num-users: 4600;
+}
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.brand-glow {
+                    /* Basic text shadow for a glow effect */
+                    text-shadow:
+                        0 0 5px #fff,    /* White glow */
+                        0 0 10px #fff,
+                        0 0 15px #fff,
+                        0 0 20px #00f,   /* Blue glow for a deeper effect */
+                        0 0 30px #00f,
+                        0 0 40px #00f;
+                    animation: glow-animation 2s infinite alternate; /* Optional: subtle animation */
+                }
+
+                @keyframes glow-animation {
+                    from {
+                        text-shadow:
+                            0 0 5px #fff,
+                            0 0 10px #fff,
+                            0 0 15px #fff,
+                            0 0 20px #00f;
+                    }
+                    to {
+                        text-shadow:
+                            0 0 10px #fff,
+                            0 0 20px #fff,
+                            0 0 30px #fff,
+                            0 0 40px #00f,
+                            0 0 50px #00f,
+                            0 0 60px #00f;
+                    }
+                }
