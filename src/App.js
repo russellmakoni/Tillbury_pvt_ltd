@@ -18,8 +18,7 @@ import {
 } from 'lucide-react';
 import Services from './commponents/Service';
 
-ReactGA.initialize("G-YP97XN63BY"); // Replace with your GA4 Measurement ID
-
+ReactGA.initialize("G-1ETED8194Y"); 
 
 
 const Features = () => (
@@ -157,7 +156,7 @@ export default function App() {
     };
     useEffect(() => {
         // Initialize GA4
-        ReactGA.initialize("G-YP97XN63BY");
+        ReactGA.initialize("G-1ETED8194Y");
     }, []);
 
 useEffect(() => {
