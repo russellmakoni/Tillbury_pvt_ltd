@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 
 const Header = ({ activeSection, currentPage, onNavigate }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const navLinks = ["Home", "About", "Services", "Portfolio", "Contact"];
+    const navLinks = ["Home", "About", "Services", "WhyChooseUs", "Contact"];
     
     const handleNavClick = (link) => {
-        if (link === 'Portfolio') {
+        if (link === 'WhyChooseUs') {
             onNavigate('portfolio');
         } else {
             onNavigate('home', `#${link.toLowerCase()}`);
